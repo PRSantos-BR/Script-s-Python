@@ -1,0 +1,19 @@
+=======================================================================================
+   lst_eventos deverá ter no final 5 eventos.
+   Se for fornecido menos de 5 eventos, lst_eventos deverá ser completado com '????'
+
+   Como fariam?
+
+   Eu opto pela "LIST COMPREHENSION".
+======================================================================================
+# List Comrprehension
+# -------------------
+lst_eventos = ['EVT1', 'EVT2', 'EVT3']
+[lst_eventos.append('????') for i in range(len(lst_eventos), 5)]
+print(lst_eventos)
+
+# Função Lambda
+#--------------
+lst_eventos = ['EVT1', 'EVT2', 'EVT3']
+list(map(lambda i: lst_eventos.append('????'), range(len(lst_eventos), 5)))
+print(lst_eventos)
